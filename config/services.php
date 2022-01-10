@@ -29,5 +29,11 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'firebase' => [
+        'api_key' => 'AIzaSyARiXTKTNeV2T10mSjzZdq2gDUjr_qsOuU',
+        'auth_domain' => 'ayo-sparring.firebaseapp.com',
+        'database_url' => 'https://ayo-sparring-default-rtdb.asia-southeast1.firebasedatabase.app/',
+        'storage_bucket' => 'ayo-sparring.appspot.com',
+    ],
 
 ];
