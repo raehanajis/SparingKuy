@@ -85,8 +85,14 @@
                     </li>
                     <li class="nav-item me-1 mb-1 d-flex align-items-center">
                         <a class="nav-link" 
-                           href="#">
-                          List Pertandingan
+                           href="{{url('category')}}">
+                          Sport
+                        </a>
+                    </li>
+                    <li class="nav-item me-1 mb-1 d-flex align-items-center">
+                        <a class="nav-link" 
+                           href="{{url('pertandingan')}}">
+                          Pertandingan
                         </a>
                     </li>
                 </ul>

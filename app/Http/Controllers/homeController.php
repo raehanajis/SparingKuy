@@ -58,6 +58,10 @@ class homeController extends Controller
         
         return view('history', $myArray);
     }
+    public function category(Request $request){
+
+        return view('category');
+    }
     public function dashboard(Request $request){
         $firestore = app('firebase.firestore');
         $db = $firestore->database();
