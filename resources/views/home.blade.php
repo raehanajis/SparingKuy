@@ -81,8 +81,8 @@
                     </li>
                     <li class="nav-item me-4 mb-1 d-flex align-items-center">
                         <a class="nav-link" 
-                           href="#">
-                          History
+                           href="{{url('category')}}">
+                          Sport
                         </a>
                     </li>
                 </ul>
