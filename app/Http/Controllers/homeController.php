@@ -31,9 +31,9 @@ class homeController extends Controller
 
         return view('signin');
     }
-    public function history(Request $request){
+    public function category(Request $request){
 
-        return view('history');
+        return view('category');
     }
     public function dashboard(Request $request){
 
