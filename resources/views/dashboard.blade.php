@@ -82,111 +82,21 @@
       <section>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
+            @foreach($orders as $item=>$value)
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header border-bottom">
+                    <h4>{{$value["namaSparring"]}}</h4>
+                  </div>
+                  <div class="card-body">
+                    <h5>{{$value["location"]}}</h5>
+                    <br>
+                    <p>Waktu : {{$value["date"]}}, {{$value["hour"]}}</p>
+                    <p>Jumlah Anggota : {{$value["joined"]}}/{{$value["total"]}}</p>  
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h4>Nama Sparing1</h4>
-                </div>
-                <div class="card-body">
-                  <h5>Tempat tanding </h5>
-                  <br>
-                  <p>waktu sparing (termasuk jam dll)</p>
-                  <p>jumlah anggota</p>  
-                </div>
-              </div>
-            </div>
-
+            @endforeach
             </div>
 
           </div>
@@ -227,6 +137,9 @@
       // pls don't forget to change to your domain :)
       injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
       
+      
+    </script>
+    <script>
       
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->

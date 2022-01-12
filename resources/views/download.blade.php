@@ -64,29 +64,29 @@
   
             <div class="collapse navbar-collapse" 
                  id="navbarSupportedContent">
-                <ul class=" nav navbar-nav navbar-center">
-                    <li class="nav-item me-4 mb-1 d-flex align-items-center  ">
+                 <ul class=" nav navbar-nav navbar-center">
+                    <li class="nav-item me-1 mb-1 d-flex align-items-center ">
                         <a class="nav-link" 
                            href="{{url('home')}}">
                           Home 
                       </a>
                     </li>
-                    <li class="nav-item me-4 mb-1 d-flex align-items-center ">
+                    <li class="nav-item me-1 mb-1 d-flex align-items-center ">
                         <a class="nav-link" 
                            href="{{url('fitur')}}">
                           Features
                         </a>
                     </li>
-                    <li class="nav-item me-4 mb-1 d-flex align-items-center active">
+                    <li class="nav-item me-1 mb-1 d-flex align-items-center active">
                         <a class="nav-link" 
                            href="{{url('download')}}">
                           Download
                         </a>
                     </li>
-                    <li class="nav-item me-4 mb-1 d-flex align-items-center">
+                    <li class="nav-item me-1 mb-1 d-flex align-items-center">
                         <a class="nav-link" 
                            href="#">
-                          History
+                          List Pertandingan
                         </a>
                     </li>
                 </ul>

@@ -52,83 +52,11 @@
               />
             </div>
             <div class="col-xl-6">
-              <div class="card-body p-md-5 text-black">
-                <h3 class="mb-5 text-uppercase">Sign Up For Free</h3>
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example97">Enter Your Name</label>
+              <div class="card-body p-md-5 text-black h-100">
+                <div class="d-flex flex-column justify-content-center align-items-center h-75">
+                  <h3 class="mb-5 text-uppercase" style="text-align:center">Sign Up For Free</h3>
+                  <button type="button" style="text-align:center" class="btn btn-danger btn-lg ms-2">Sign Up With Google</button>
                 </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example97">Email ID</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example99">Password</label>
-                </div>
-                
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example99">Confirm Password</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example8">Address</label>
-                </div>
-
-                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-
-                  <h6 class="mb-0 me-4">Gender: </h6>
-
-                  <div class="form-check form-check-inline mb-0 me-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="inlineRadioOptions"
-                      id="femaleGender"
-                      value="option1"
-                    />
-                    <label class="form-check-label" for="femaleGender">Female</label>
-                  </div>
-
-                  <div class="form-check form-check-inline mb-0 me-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="inlineRadioOptions"
-                      id="maleGender"
-                      value="option2"
-                    />
-                    <label class="form-check-label" for="maleGender">Male</label>
-                  </div>
-
-
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1m" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Example1m">Provinsi</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1n" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Example1n">Kabupaten</label>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="text-center text-muted mt-1 mb-0">Have already an account? <a href="{{url('signin')}}" class="fw-bold text-body"><u>Login here</u></a></p>
-
-                <div class="d-flex justify-content-end pt-3">
-                  <button type="button" class="btn btn-danger btn-lg ms-2">Sign Up</button>
-                </div>
-
               </div>
             </div>
           </div>
@@ -163,5 +91,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+    <script>
+       var config = {
+         // This is the variable you got from Firebase's Firebase SDK snippet. It includes values for apiKey, authDomain, projectId, etc.
+         
+      };
+      firebase.initializeApp(config);
+      var googleProvider = new firebase.auth.GoogleAuthProvider();
+      var googleCallbackLink = '/login/google/callback';
+
+      async function socialSignin(provider) {
+          var socialProvider = null;        
+          socialProvider = googleProvider;
+          document.getElementById('social-login-form').action = googleCallbackLink;
+          firebase.auth().signInWithPopup(socialProvider).then(function(result) {
+            result.user.getIdToken().then(function(result) {
+               document.getElementById('social-login-tokenId').value = result;
+               document.getElementById('social-login-form').submit();
+            });
+          }).catch(function(error) {
+              // do error handling
+              console.log(error);
+          });
+      }
+    </script>
   </body>
 </html>

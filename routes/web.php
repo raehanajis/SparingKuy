@@ -29,12 +29,18 @@ Route::get('/dashboard',[homeController::class, 'dashboard']
 );
 Route::get('/profile',[homeController::class, 'profile'] 
 );
-// Route::get('/display', function(){
-//     $student = app('firebase.firestore')->database()->collection('room')->document('5MiMbWOkWwsAfz7PP6Ih')->snapshot();
-//     print_r('ID ='.$student->id());
-//     print_r("<br>". 'Student Name = '.$student->data()['alamat']);
-//     print_r("<br>".'Student Age = '.$student->data()['category']);
-//   });
+Route::get('/display', function(){
+    $student = app('firebase.firestore')->database()->collection('order')->documents();
+    // print_r('ID ='.$student->id());
+    // print_r("<br>". 'Student Name = '.$student->data()['location']);
+    // print_r("<br>".'Student Age = '.$student->data()['idRoom']);
+    foreach ($student as $document) {
+        if ($document->exists()) {
+            print_r($document->data());
+            printf(PHP_EOL);
+        }
+    }
+  });
 
 
 
