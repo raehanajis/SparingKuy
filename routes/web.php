@@ -23,7 +23,7 @@ Route::get('/signup',[homeController::class, 'signup']
 );
 Route::get('/signin',[homeController::class, 'signin'] 
 );
-Route::get('/history',[homeController::class, 'history'] 
+Route::get('/category',[homeController::class, 'category'] 
 );
 Route::get('/dashboard',[homeController::class, 'dashboard'] 
 );
