@@ -93,10 +93,7 @@
                     </li>
                 </ul>
                 
-            </div>
-            <form class="d-flex input-group w-auto">
-                    <a class="btn btn-outline-white bg-danger text-light" href="{{url('signup')}}">Sign up</a>
-            </form>
+            </div>          
     </nav>
 
 <style>

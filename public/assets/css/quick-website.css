@@ -55,6 +55,10 @@ Copyright 2020 Webpixels
     box-sizing: border-box;
 }
 
+.itemview{
+    margin-bottom: 50px;
+}
+
 html
 {
     font-family: sans-serif;

@@ -97,10 +97,7 @@
                     </li>
                 </ul>
                 
-            </div>
-            <form class="d-flex input-group w-auto">
-                    <a class="btn btn-outline-white bg-danger text-light" href="{{url('signup')}}">Sign up</a>
-            </form>
+            </div>            
     </nav>
 
     <style>
@@ -140,7 +137,7 @@ a:hover, a:focus{
                     <strong class="text-secondary">Download Free </strong>
                     </h1>
                     <!-- Text -->
-                    <a href=""> <button type="button" class="btn mb-2 mb-md-0 btn-danger btn-block"><span>Download</span> 
+                    <a href="https://drive.google.com/file/d/1igE2KyNavDe-GuTWrYz6CjD8nIs2pxtb/view?usp=sharing"> <button type="button" class="btn mb-2 mb-md-0 btn-danger btn-block"><span>Download</span> 
 									<div class="icon d-flex align-items-center justify-content-center">
 										<i class="ion-ios-cloud-download"></i>
 									</div>
@@ -150,10 +147,9 @@ a:hover, a:focus{
                 </div>
                 <div class="col-12 col-md-10 col-lg-6 order-md-1 pr-md-5">
                               <!-- Image -->
-                              <figure class="w-100">
-                        <img alt="Image placeholder" src="/img/phone.png" class="img-fluid mw-md-120">
-                    </figure>
-
+                      <figure class="w-100">
+                          <img alt="Image placeholder" src="/img/phone.png" class="img-fluid mw-md-120">
+                      </figure>
                 </div>
             </div>
         </div>
